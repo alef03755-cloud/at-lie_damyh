@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blusa Bege – Ateliê da Myh</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" type="image/png" href="imagens/favicon.png">
+</head>
+
+<body>
+
+    <header>
+        <button class="btn-voltar" onclick="history.back()">⟵ Voltar</button>
+
+        <div class="nav-container">
+            <!-- Logo clicável -->
+            <a href="index.html">
+                <img src="imagens/logo.jpg" alt="Ateliê da Myh" class="logo">
+            </a>
+
+            <!-- Barra de pesquisa -->
+            <div class="barra-pesquisa-header">
+                <input type="text" id="pesquisa" placeholder="🔍 Buscar...">
+            </div>
+
+            <!-- Menu -->
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="contato.html">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section class="pagina-produto">
+
+        <!-- Miniaturas -->
+        <div class="miniaturas">
+            <img src="imagens/roupa3_frente.jpg" class="miniatura"
+                onclick="trocarProduto('cropped bege', 'R$ 44,99', this.src)">
+            <img src="imagens/roupa3_frente.jpg" class="miniatura"
+                onclick="trocarProduto('cropped bege', 'R$ 44,99', this.src)">
+            <img src="imagens/roupa3_frente.jpg" class="miniatura"
+                onclick="trocarProduto('cropped bege', 'R$ 44,99', this.src)">
+
+        </div>
+
+
+        <!-- Imagem principal -->
+        <div class="imagem-principal-box">
+            <img src="imagens/roupa3_frente.jpg" id="imagem-principal" class="imagem-principal">
+        </div>
+
+        <!-- Informações -->
+        <div class="info-produto">
+
+            <h1 class="titulo-produto">Cropped Bata</h1>
+            <div class="precos">
+                <span class="preco-antigo">R$ 75,00</span>
+                <span class="preco-novo">R$ 68,00</span>
+            </div>
+
+            <p class="descricao-produto">
+                Blusa feita à mão com fio premium 100% algodão.
+                Leve, confortável e perfeita para todas as estações.
+            </p>
+
+
+
+            <!-- Tamanhos -->
+            <div class="tamanhos-box">
+                <h3>Tamanhos</h3>
+                <div class="tamanhos">
+                    <span>P</span>
+                    <span>M</span>
+                    <span>G</span>
+                    <span>GG</span>
+                </div>
+            </div>
+
+            <!-- Cuidados -->
+            <div class="cuidados">
+                <h3>Cuidados</h3>
+                <ul>
+                    <li>Lavar à mão</li>
+                    <li>Secar à sombra</li>
+                    <li>Não usar secadora</li>
+                    <li>Manter dobrada</li>
+                </ul>
+            </div>
+
+            <!-- Botão -->
+            <a href="https://wa.me/5518996907723?text=Olá!%20Tenho%20interesse%20na%20Blusa%20Bege%20💛"
+                class="botao botao-grande">Comprar pelo WhatsApp</a>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+
+            <div class="footer-col">
+                <h3>Ateliê da Myh</h3>
+                <p>Crochetando com amor. Peças artesanais exclusivas.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Páginas</h3>
+                <a href="index.html">Início</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="galeria.html">Galeria</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <div class="footer-col">
+                <h3>Contato</h3>
+                <p>WhatsApp: (18) 99690-7723</p>
+                <p>Instagram: @atelie_damyh</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/atelie_damyh" target="_blank">📸</a>
+                    <a href="https://wa.me/5518996907723" target="_blank">💬</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-final">
+            © 2024 Ateliê da Myh — Feito com carinho 💛
+        </div>
+    </footer>
+
+    <script>
+        function trocarImagem(src) {
+            document.getElementById("imagem-principal").src = src;
+        }
+    </script>
+    <script>
+        function trocarProduto(nome, preco, imagem) {
+            // Troca a imagem principal
+            document.getElementById("imagem-principal").src = imagem;
+
+            // Troca o nome do produto
+            document.querySelector(".titulo-produto").innerText = nome;
+
+            // Troca o preço
+            document.querySelector(".preco-novo").innerText = preco;
+        }
+    </script>
+
+
+</body>
+
+</html>
